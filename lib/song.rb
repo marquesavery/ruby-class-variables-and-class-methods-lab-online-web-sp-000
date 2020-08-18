@@ -39,7 +39,6 @@ class Song
       else
         genre_list[item] = 1
       end
-      @@genre_list
     end
   end
 
