@@ -35,7 +35,7 @@ class Song
     genre_list = Hash.new
     @@genres.collect do |item|
       if @@genres.include?(item)
-        genre_list[item] += 1
+        genre_list[item] = 1
       else
         genre_list[item] = 1
       end
