@@ -44,6 +44,14 @@ class Song
   end
 
   def self.artist_count
-    @@artists
+    artist_list = Hash.new
+    @@artists.each do |item|
+      if artist_list.include?(item)
+        artist_list[item] += 1
+      else
+        artist_list[item] = 1
+      end
+    end
+    artist_list
   end
 end
