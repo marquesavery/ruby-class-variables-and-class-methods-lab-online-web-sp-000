@@ -32,8 +32,9 @@ class Song
   end
 
   def self.genre_count
-    @@genres.inject(Hash.new) do |hash, v|
-      hash[v] += 1
+    genre_list = Hash.new
+    @@genres.collect do |item|
+      genre_list[item] += 1
     end
   end
 
